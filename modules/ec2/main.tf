@@ -15,8 +15,9 @@
 # }
 
 resource "aws_instance" "general" {
-  ami           = var.ami
-  instance_type = var.instance_type
+  ami           = var.ec2_ami
+  instance_type = var.ec2_instance_type
+  # subnet_id  = var.ec2_subnet_id
 
   tags = {
     Name = var.ec2_name
